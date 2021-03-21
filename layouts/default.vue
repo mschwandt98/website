@@ -1,5 +1,13 @@
 <template>
-    <Nuxt />
+    <div>
+        <img
+            src="https://img.fotocommunity.com/img7291-magdeburger-dom-an-der-elbe-50de0b94-568a-41ad-948f-03a0f6962420.jpg?height=1080"
+            class="cover-img"
+            alt="" />
+        <div class="container">
+            <Nuxt class="content" />
+        </div>
+    </div>
 </template>
 
 <style lang="scss">
@@ -7,18 +15,17 @@
     --primary: #2e2e2e;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
-    background: url('https://img.fotocommunity.com/img7291-magdeburger-dom-an-der-elbe-50de0b94-568a-41ad-948f-03a0f6962420.jpg?height=1080')rgb(204, 204, 204);
-    background-position: fixed;
-    font-family:
-        'Source Sans Pro',
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        'Helvetica Neue',
-        Arial,
-        sans-serif;
+    background-color: rgb(230, 230, 230);
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 
@@ -27,10 +34,43 @@ body {
     margin: 0;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+h1 {
+    font-size: 1.5rem;
+}
+
+.cover-img {
+    object-fit: cover;
+    object-position: 50% 25%;
+    max-height: 25vh;
+    width: 100%;
+}
+
+.container .content {
+    min-width: 256px;
+    padding: 1em 2em;
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        background-image: url('https://img.fotocommunity.com/img7291-magdeburger-dom-an-der-elbe-50de0b94-568a-41ad-948f-03a0f6962420.jpg?height=1080');
+        background-position: fixed;
+    }
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+
+        .content {
+            background-color: rgba(230, 230, 230, 0.8);
+            height: 100%;
+            min-height: 100vh;
+            max-width: 40vw;
+        }
+    }
+
+    .cover-img {
+        display: none;
+    }
 }
 
 ::-webkit-scrollbar {
