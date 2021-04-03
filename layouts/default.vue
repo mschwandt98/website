@@ -4,6 +4,7 @@
             classes="cover-img"
             altText=""
             titleText=""
+            :sizes="[600, 800, 1000, 1200, 1600, 2000]"
             :sources="sources"
         />
         <div class="container">

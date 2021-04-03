@@ -9,7 +9,7 @@
     <picture v-else>
         <template v-for="(source, key) in sources">
             <source
-                :srcset="source"
+                :srcset="GetSourcSet(source)"
                 :type="'image/' + GetType(source)"
                 :key="key"
             />
@@ -34,7 +34,13 @@ export default Vue.component('MeImage', {
         },
         classes: {
             type: String,
-            required: false
+            required: false,
+            default: ''
+        },
+        sizes: {
+            type: Array,
+            required: false,
+            default: []
         },
         sources: {
             type: [String, Array],
@@ -42,7 +48,8 @@ export default Vue.component('MeImage', {
         },
         titleText: {
             type: String,
-            required: false
+            required: false,
+            default: ''
         }
     },
     methods: {
@@ -55,6 +62,27 @@ export default Vue.component('MeImage', {
             }
 
             return '';
+        },
+        GetSourcSet(source: string): string {
+
+            if (this.sizes.length) {
+
+                let splitted: string[] = source.split('.');
+                let indexBeforeType: number = splitted.length - 2;
+                let sourceset: string = '';
+                this.sizes.forEach(size => {
+                    let copySplitted = [...splitted];
+                    copySplitted[indexBeforeType] += `-${size}`;
+                    sourceset += copySplitted.join('.') + ` ${size}w,`;
+                });
+
+                let lastSize: number = [...this.sizes].pop() as number;
+                sourceset += source + ' ' + (lastSize / 2 + lastSize) + 'w';
+
+                return sourceset;
+            }
+
+            return source;
         },
         GetType(source: string): string {
 
