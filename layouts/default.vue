@@ -35,6 +35,10 @@ export default Vue.extend({
     --primary: #2e2e2e;
 }
 
+::selection {
+    background-color: rgba(#2e2e2e, .2);
+}
+
 *,
 *::before,
 *::after {
