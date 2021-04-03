@@ -1,14 +1,33 @@
 <template>
     <div>
-        <img
-            src="https://img.fotocommunity.com/img7291-magdeburger-dom-an-der-elbe-50de0b94-568a-41ad-948f-03a0f6962420.jpg?height=1080"
-            class="cover-img"
-            alt="" />
+        <MeImage
+            classes="cover-img"
+            altText=""
+            titleText=""
+            :sources="sources"
+        />
         <div class="container">
             <Nuxt class="content" />
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+    data: function() {
+        return {
+            sources: [
+                '/background.avif',
+                '/background.webp',
+                '/background.jpg',
+                '/background.png'
+            ]
+        }
+    }
+});
+</script>
 
 <style lang="scss">
 :root {
@@ -38,24 +57,12 @@ h1 {
     font-size: 1.5rem;
 }
 
-.cover-img {
-    object-fit: cover;
-    object-position: 50% 25%;
-    max-height: 25vh;
-    width: 100%;
-}
-
 .container .content {
     min-width: 256px;
     padding: 1em 2em;
 }
 
 @media screen and (min-width: 992px) {
-    html {
-        background-image: url('https://img.fotocommunity.com/img7291-magdeburger-dom-an-der-elbe-50de0b94-568a-41ad-948f-03a0f6962420.jpg?height=1080');
-        background-position: fixed;
-    }
-
     .container {
         display: flex;
         justify-content: flex-end;
@@ -69,7 +76,21 @@ h1 {
     }
 
     .cover-img {
-        display: none;
+        position: absolute;
+        object-fit: cover;
+        object-position: center left;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .cover-img {
+        object-fit: cover;
+        object-position: 50% 60%;
+        max-height: 25vh;
+        width: 100%;
     }
 }
 

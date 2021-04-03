@@ -39,7 +39,7 @@ export default Vue.extend({
             githubUrl: 'https://github.com/mschwandt98'
         }
     }
-})
+});
 </script>
 
 <style lang="scss">
