@@ -30,6 +30,8 @@ export default Vue.component('MeLink', {
 <style lang="scss" scoped>
 a {
     color: inherit;
+    font-size: inherit;
+    outline: 0;
     text-decoration: none;
 
     &:hover span::after {

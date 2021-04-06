@@ -5,6 +5,8 @@
         :class="classes"
         :alt="altText"
         :title="titleText"
+        height="100%"
+        width="100%"
     />
     <picture v-else>
         <template v-for="(source, key) in sources">
@@ -19,6 +21,8 @@
             :class="classes"
             :alt="altText"
             :title="titleText"
+            height="100%"
+            width="100%"
         />
     </picture>
 </template>

@@ -124,7 +124,8 @@ export default {
                     devStarting: 'I have been developing professionally for 3 years with a focus on web development. For the majority of my training, I learned programming in web development. During this time I also fell in love with web development.',
                     privateDev: 'Unfortunately, during my apprenticeship I didn\'t have much time to develop in my private life. But now I want to get started right away. In the future, I\'ll be a lot more active on GitHub. There I will evolve my skills in JavaScript, C#, PHP and JS-Frameworks like VueJS.',
                     githubLink: 'If you\'re interested in my projects, just check out {0} - linked below.',
-                    githubProfileText: 'my GitHub profile'
+                    githubProfileText: 'my GitHub profile',
+                    error: 'There was an error.'
                 },
                 de: {
                     titleNote: 'Software Entwickler, Frontend Entwicklung',
@@ -134,7 +135,8 @@ export default {
                     devStarting: 'Ich programmiere professionell seit 3 Jahren mit einem Fokus auf Frontend-Entwicklung. Den Großteil meiner Ausbildungszeit lernte ich die Programmierung in der Webentwicklung. Während dieser Zeit verliebte ich mich auch in die Webentwicklung.',
                     privateDev: 'Leider hatte ich während meiner Ausbildung nicht viel Zeit zum Entwickeln in meiner Freizeit. Aber jetzt möchte ich damit loslegen. In Zukunft werde ich aktiver auf GitHub sein. Dort werde ich meine Fähigkeiten in JavaScript, C#, PHP und JS-Frameworks wie VueJS verbessern.',
                     githubLink: 'Wenn du an meinen Projekten interessiert bist, schau auf {0} vorbei.',
-                    githubProfileText: 'meinem GitHub Profil'
+                    githubProfileText: 'meinem GitHub Profil',
+                    error: 'Es trat ein Fehler auf.'
                 }
             }
         }

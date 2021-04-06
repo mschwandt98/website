@@ -82,6 +82,7 @@ h1 {
 .container .content {
     min-width: 256px;
     padding: 1em 2em;
+    position: relative;
 }
 
 @media screen and (min-width: 992px) {
