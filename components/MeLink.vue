@@ -40,7 +40,6 @@ a {
     }
 
     span {
-        display: inline-block;
         position: relative;
 
         &::after {
