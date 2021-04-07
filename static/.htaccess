@@ -1,11 +1,8 @@
-RewriteEngine on
-
 <IfModule mod_rewrite.c>
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>
-
-Redirect 301 mschwandt.de https://www.mschwandt.de
 
 <IfModule mod_headers.c>
 <FilesMatch "\.(ico|avif|webp|jpeg|jpg|png|css|js|ttf)$">
