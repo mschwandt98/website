@@ -85,7 +85,6 @@ html {
     color: $primary;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    overflow: hidden;
 }
 
 h1 {
@@ -99,6 +98,10 @@ h1 {
 }
 
 @media screen and (min-width: 992px) {
+    html {
+        overflow: hidden;
+    }
+
     .container {
         display: flex;
         justify-content: flex-end;
@@ -122,10 +125,11 @@ h1 {
 }
 
 @media screen and (max-width: 991px) {
-    body {
-        @include scroll-shadow();
-        height: 100vh;
-    }
+    // TODO: fix
+    // body {
+    //     @include scroll-shadow();
+    //     height: 100vh;
+    // }
 
     .cover-img {
         height: 25vh;
