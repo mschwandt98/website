@@ -1,12 +1,13 @@
 <template>
     <div>
-        <MeImage
-            classes="cover-img"
-            :altText="$t('imageText')"
-            :titleText="$t('imageText')"
-            :sizes="[600, 800, 1000, 1200, 1600, 2000]"
-            :sources="sources"
-        />
+        <div class="cover-img">
+            <MeImage
+                :altText="$t('imageText')"
+                :titleText="$t('imageText')"
+                :sizes="[600, 800, 1000, 1200, 1600, 2000]"
+                :sources="sources"
+            />
+        </div>
         <div class="container">
             <Nuxt class="content" />
         </div>
@@ -96,7 +97,7 @@ h1 {
         }
     }
 
-    .cover-img {
+    .cover-img img {
         position: fixed;
         object-fit: cover;
         object-position: center left;
@@ -108,10 +109,13 @@ h1 {
 
 @media screen and (max-width: 991px) {
     .cover-img {
-        object-fit: cover;
-        object-position: 50% 60%;
-        max-height: 25vh;
+        height: 25vh;
         width: 100%;
+
+        img {
+            object-fit: cover;
+            object-position: 50% 60%;
+        }
     }
 }
 

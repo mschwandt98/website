@@ -59,6 +59,10 @@ export default Vue.extend({
 @import '~assets/icons.css';
 
 .social-links {
+    &.text-link > a {
+        display: inline-block;
+    }
+
     &:not(.text-link) {
         display: flex;
         flex-wrap: wrap;
