@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="root">
         <div class="cover-img">
             <MeImage
                 :altText="$t('imageText')"
@@ -62,7 +62,6 @@ export default Vue.extend({
     background-repeat: no-repeat;
     background-size: 100% 45px, 100% 45px, 100% 16px, 100% 16px;
     overflow-y: auto;
-    position: relative;
 }
 
 ::selection {
@@ -111,6 +110,7 @@ h1 {
             background-color: rgba($secondary, 0.8);
             height: 100vh;
             max-width: 40vw;
+            position: relative;
         }
     }
 
@@ -125,11 +125,12 @@ h1 {
 }
 
 @media screen and (max-width: 991px) {
-    // TODO: fix
-    // body {
-    //     @include scroll-shadow();
-    //     height: 100vh;
-    // }
+    #root {
+        @include scroll-shadow();
+        height: 100vh;
+        padding-bottom: 3rem;
+        position: fixed;
+    }
 
     .cover-img {
         height: 25vh;

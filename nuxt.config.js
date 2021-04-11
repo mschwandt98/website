@@ -1,4 +1,9 @@
 export default {
+    // Creates 404.html
+    generate: {
+        fallback: true
+    },
+
     // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
     ssr: false,
 

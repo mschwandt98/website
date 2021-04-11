@@ -15,7 +15,7 @@
                 {{ $t('privateDev') }}
             </p>
             <p>
-                <i18n path="githubLink" class="social-links text-link">
+                <i18n path="githubLink">
                     <MeLink
                         :displayName="$t('githubProfileText')"
                         :url="githubUrl"
@@ -59,27 +59,19 @@ export default Vue.extend({
 @import '~assets/icons.css';
 
 .social-links {
-    &.text-link > a {
-        display: inline-block;
-    }
-
-    &:not(.text-link) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-
-        > a {
-            align-items: center;
-            display: flex;
-            font-size: 1.5em !important;
-            gap: .25em;
-            padding: .25rem .5rem;
-            width: fit-content;
-        }
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 
     > a {
+        align-items: center;
+        display: flex;
+        font-size: 1.5em !important;
+        gap: .25em;
+        padding: .25rem .5rem;
+        width: fit-content;
+
         &:hover span {
             opacity: 1;
         }
