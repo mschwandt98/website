@@ -31,7 +31,25 @@ export default {
                 content: 'Marian Schwandt'
             }
         ],
+        // <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
         link: [
+            {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: '/favicon.ico'
+            },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                href: '/icon-32.png',
+                sizes: '32x32'
+            },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                href: '/icon-96.png',
+                sizes: '96x96'
+            },
             {
                 rel: 'shortcut icon',
                 type: 'image/x-icon',
