@@ -44,6 +44,12 @@
                 icon="twitter"
                 :url="twitterUrl"
             />
+            <MeLink
+                class="mail-link"
+                displayName="Mail"
+                icon="mail"
+                :url="mailUrl"
+            />
         </div>
     </div>
 </template>
@@ -56,7 +62,8 @@ export default Vue.extend({
         return {
             githubUrl: "https://github.com/mschwandt98",
             linkedInUrl: "https://www.linkedin.com/in/marian-schwandt-0497a2212",
-            twitterUrl: "https://twitter.com/masc_1998"
+            twitterUrl: "https://twitter.com/masc_1998",
+            mailUrl: "mailto:marian.schwandt@gmail.com"
         };
     },
 });
@@ -123,6 +130,18 @@ export default Vue.extend({
 
     span::after {
         background-color: $twitter-color !important;
+    }
+}
+
+.mail-link {
+    $mail-color: #4a5257;
+
+    i {
+        color: $mail-color !important;
+    }
+
+    span::after {
+        background-color: $mail-color !important;
     }
 }
 </style>
