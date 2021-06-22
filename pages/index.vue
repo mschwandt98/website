@@ -33,6 +33,12 @@
                 :url="githubUrl"
             />
             <MeLink
+                class="linkedin-link"
+                displayName="LinkedIn"
+                icon="linkedin"
+                :url="linkedInUrl"
+            />
+            <MeLink
                 class="twitter-link"
                 displayName="Twitter"
                 icon="twitter"
@@ -49,7 +55,8 @@ export default Vue.extend({
     data: function () {
         return {
             githubUrl: "https://github.com/mschwandt98",
-            twitterUrl: "https://twitter.com/masc_1998",
+            linkedInUrl: "https://www.linkedin.com/in/marian-schwandt-0497a2212",
+            twitterUrl: "https://twitter.com/masc_1998"
         };
     },
 });
@@ -92,6 +99,18 @@ export default Vue.extend({
 
     span::after {
         background-color: $github-color !important;
+    }
+}
+
+.linkedin-link {
+    $linkedin-color: #0a66c2;
+
+    i {
+        color: $linkedin-color !important;
+    }
+
+    span::after {
+        background-color: $linkedin-color !important;
     }
 }
 

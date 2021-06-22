@@ -128,12 +128,6 @@ h1 {
 }
 
 @media screen and (max-width: 575px) {
-    #root {
-        height: 100vh;
-        padding-bottom: 3rem;
-        position: fixed;
-    }
-
     .cover-img {
         height: 25vh;
         width: 100%;
