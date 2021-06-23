@@ -47,8 +47,7 @@ export default Vue.extend({
     data: function() {
         return {
             githubUrl: "https://github.com/mschwandt98",
-            linkedInUrl:
-                "https://www.linkedin.com/in/marian-schwandt-0497a2212",
+            linkedInUrl: "https://www.linkedin.com/in/marian-schwandt",
             twitterUrl: "https://twitter.com/masc_1998",
             mailUrl: "mailto:marian.schwandt@gmail.com"
         };
